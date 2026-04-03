@@ -1,3 +1,28 @@
+# 🧪 Tester Portfolio - Huynh Le Thuy Uyen
+
+<p align="center">
+  <b>Manual Testing | API Testing | Test Design</b>
+</p>
+
+---
+
+## 📌 Overview
+
+This repository showcases my practical experience in software testing, including:
+
+- API testing using Postman  
+- Writing structured test cases  
+- Designing effective test data  
+
+---
+
+## 📂 Repository Structure
+📁 Tester-Portfolio
+│
+├── 📄 API-IHOADON.postman_collection.json
+├── 📄 Sample Test Data.xlsx
+├── 📄 Sample Test Cases - Login.xlsx
+└── README.md
 
 ---
 
@@ -9,10 +34,10 @@
 **Tool:** Postman  
 
 #### 📖 Description
-This collection contains API requests for testing the **IHOADON system**.
+This collection contains API requests for testing the IHOADON system.
 
 #### 🔧 Includes
-- HTTP methods: `GET`, `POST`, `PUT`, `DELETE`
+- HTTP methods: GET, POST, PUT, DELETE  
 - Request headers & parameters  
 - Sample request body  
 - Expected responses  
@@ -30,7 +55,7 @@ This collection contains API requests for testing the **IHOADON system**.
 **File:** `Sample Test Cases - Login.xlsx`
 
 #### 📖 Description
-A structured set of test cases for the **Login functionality**.
+A structured set of test cases for the Login functionality.
 
 #### 🧩 Test Case Structure
 - Test Case ID  
@@ -98,18 +123,17 @@ Test data used to support execution of test cases.
 ## 🚀 How to Use
 
 ### 1. Run API Testing
-- Open **Postman**
-- Click **Import**
-- Select file:  
-  `API-IHOADON.postman_collection.json`
+- Open Postman  
+- Click **Import**  
+- Select file: `API-IHOADON.postman_collection.json`  
 - Execute requests and observe responses  
 
 ### 2. Review Test Cases
-- Open: `Sample Test Cases - Login.xlsx`
+- Open: `Sample Test Cases - Login.xlsx`  
 - Follow test steps to execute manually  
 
 ### 3. Use Test Data
-- Open: `Sample Test Data.xlsx`
+- Open: `Sample Test Data.xlsx`  
 - Use data for testing scenarios  
 
 ---
@@ -140,11 +164,11 @@ Test data used to support execution of test cases.
 
 ## ⭐ Notes
 
-This portfolio is created for **learning and demonstration purposes**.  
+This portfolio is created for learning and demonstration purposes.  
 I am continuously improving my testing skills and welcome feedback.
 
 ---
 
 ## 🙌 Thank You
 
-Thank you for reviewing my portfolio!  
+Thank you for reviewing my portfolio!
