@@ -1,4 +1,4 @@
-# 🧪 Tester Portfolio - Huynh Le Thuy Uyen
+# Tester Portfolio - Huynh Le Thuy Uyen
 
 <p align="center">
   <b>Manual Testing | API Testing | Test Design</b>
@@ -27,23 +27,23 @@ This repository showcases my practical experience in software testing, including
 └── README.md
 ```
 
-## 🔍 Project Details
+##  Project Details
 
-### 📡 1. API Testing - IHOADON System
+###  1. API Testing - IHOADON System
 
 **File:** `API-IHOADON.postman_collection.json`  
 **Tool:** Postman  
 
-#### 📖 Description
+#### 🔹 Description
 This collection contains API requests for testing the IHOADON system.
 
-#### 🔧 Includes
+#### 🔹 Includes
 - HTTP methods: GET, POST, PUT, DELETE  
 - Request headers & parameters  
 - Sample request body  
 - Expected responses  
 
-#### 🎯 Testing Focus
+#### 🔹 Testing Focus
 - Validate API endpoints  
 - Check response status codes  
 - Verify response data structure  
@@ -51,14 +51,14 @@ This collection contains API requests for testing the IHOADON system.
 
 ---
 
-### 📝 2. Test Cases - Login Feature
+###  2. Test Cases - Login Feature
 
 **File:** `Sample Test Cases - Login.xlsx`
 
-#### 📖 Description
+#### 🔹 Description
 A structured set of test cases for the Login functionality.
 
-#### 🧩 Test Case Structure
+#### 🔹 Test Case Structure
 - Test Case ID  
 - Test Scenario  
 - Preconditions  
@@ -67,38 +67,38 @@ A structured set of test cases for the Login functionality.
 - Actual Result  
 - Status  
 
-#### 🎯 Covered Scenarios
+#### 🔹 Covered Scenarios
 - Valid login  
 - Invalid credentials  
 - Empty input fields  
 - Boundary cases  
 - Basic negative cases  
 
-#### 💡 Goal
+#### 🔹 Goal
 Ensure login functionality works correctly under different conditions.
 
 ---
 
-### 📊 3. Sample Test Data
+###  3. Sample Test Data
 
 **File:** `Sample Test Data.xlsx`
 
-#### 📖 Description
+#### 🔹 Description
 Test data used to support execution of test cases.
 
-#### 📦 Includes
+#### 🔹 Includes
 - Valid data  
 - Invalid data  
 - Boundary values  
 
-#### 🎯 Purpose
+#### 🔹 Purpose
 - Improve test coverage  
 - Simulate real-world inputs  
 - Support negative testing  
 
 ---
 
-## 🧠 Skills Demonstrated
+## Skills Demonstrated
 
 ### 🔹 Manual Testing
 - Requirement understanding  
@@ -121,7 +121,7 @@ Test data used to support execution of test cases.
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 ### 1. Run API Testing
 - Open Postman  
@@ -139,7 +139,7 @@ Test data used to support execution of test cases.
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Add more modules (Register, Forgot Password, etc.)  
 - Include bug reports  
@@ -149,7 +149,7 @@ Test data used to support execution of test cases.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Huynh Le Thuy Uyen**  
 - Role: Software Tester (Fresher/Junior)  
@@ -157,7 +157,7 @@ Test data used to support execution of test cases.
 
 ---
 
-## 📬 Contact
+## Contact
 
 - 📧 Email: huynhlethuyuyen0611@gmail.com  
 
