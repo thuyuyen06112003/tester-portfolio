@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "2606baef-5a35-4b81-b448-200b0d0fbfcd",
+		"name": "API-IHOADON",
+		"description": "### HƯỚNG DẪN SỬ DỤNG\n\n**Bước 1: Gọi API đăng nhập để lấy về access_token**\n\n<img src=\"https://content.pstmn.io/861a03f2-b58b-497e-b251-30603ef6c875/bG9naW4ucG5n\">\n\n**Bước 2: Vào tab** **`Variables`** **trong collection** **`API-IHOADON`** **và nhập giá trị** **`access_token`** **vào biến** **`token`**\n\n<img src=\"https://content.pstmn.io/b6589411-9697-4072-a8ab-4d6746ee1a06/dG9rZW4ucG5n\">\n\n**Bước 3: Khi gọi các API sẽ tự lấy token từ biến, nếu bị báo lỗi Token hết hạn thì thực hiện lại từ bước 1**\n\n<img src=\"https://content.pstmn.io/86ece42e-cfe1-4edc-a9ec-7a693b4d224d/YXBpLnBuZw==\" alt=\"\">",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2141271"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Đăng nhập",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"9999999005\",\r\n    \"password\":\"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/login",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module quản trị người dùng",
+			"item": [
+				{
+					"name": "Lấy danh sách người dùng",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/users",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Thêm mới người dùng",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"username\": \"duongthuy\",\r\n        \"name\": \"Dương Thúy\",\r\n        \"position\": \"\",\r\n        \"department_name\": \"\",\r\n        \"mobile\": \"\",\r\n        \"email\": \"abc@gmail.com\",\r\n        \"order\": 3,\r\n        \"note\": \"\",\r\n        \"status\": \"HOAT_DONG\",\r\n        \"permissions\": \"danh_muc_khach_hang,danh_muc_hang_hoa,nguoi_su_dung\",\r\n        \"password\": \"abc123\"\r\n    }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/users",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cập nhật người dùng",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"username\": \"duongthuy\",\n        \"name\": \"Dương Thúy\",\n        \"position\": \"\",\n        \"department_name\": \"\",\n        \"mobile\": \"\",\n        \"email\": \"abcd@gmail.com\",\n        \"order\": 3,\n        \"note\": \"\",\n        \"status\": \"HOAT_DONG\",\n        \"permissions\": \"danh_muc_khach_hang,danh_muc_hang_hoa,nguoi_su_dung\",\n        \"password\": \"abc123\"\n    }\n}\n"
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/users/90E06480-B418-11ED-A44B-E132864648F3",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"users",
+								"90E06480-B418-11ED-A44B-E132864648F3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa người dùng",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/users/91EEAA90-B41D-11ED-9668-FF0825E62E4A",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"users",
+								"91EEAA90-B41D-11ED-9668-FF0825E62E4A"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module quản trị danh mục khách hàng",
+			"item": [
+				{
+					"name": "Lấy danh sách khách hàng",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/customers?limit=100&page=1",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Thêm mới khách hàng",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"code\": \"01234512341\",\r\n        \"tax_code\": \"01234512341\",\r\n        \"name\": \"Công ty test\",\r\n        \"business_address\": \"Hà Nội\",\r\n        \"transaction_address\": null,\r\n        \"surrogate_name\": \"Nguyễn Văn A\",\r\n        \"surrogate_position\": \"Tổng giám đốc\",\r\n        \"contact_person_name\": \"Nguyễn Văn B\",\r\n        \"contact_mobile\": \"0182734932\",\r\n        \"email\": \"abc@gmail.com\",\r\n        \"object_code\": \"DOANH_NGHIEP\",\r\n        \"order\": 89,\r\n        \"note\": \"\",\r\n        \"status\": \"HOAT_DONG\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/customers",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cập nhật khách hàng",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"code\": \"01234512341\",\r\n        \"tax_code\": \"01234512341\",\r\n        \"name\": \"Công ty test\",\r\n        \"business_address\": \"Hà Nội\",\r\n        \"transaction_address\": null,\r\n        \"surrogate_name\": \"Nguyễn Văn A\",\r\n        \"surrogate_position\": \"Tổng giám đốc\",\r\n        \"contact_person_name\": \"Nguyễn Văn BC\",\r\n        \"contact_mobile\": \"0182734932\",\r\n        \"email\": \"abc@gmail.com\",\r\n        \"object_code\": \"DOANH_NGHIEP\",\r\n        \"order\": 89,\r\n        \"note\": \"\",\r\n        \"status\": \"HOAT_DONG\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/customers/1B9752D0-B41C-11ED-9DA2-C1621C7E5069",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"customers",
+								"1B9752D0-B41C-11ED-9DA2-C1621C7E5069"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa khách hàng",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://118.70.81.203:8010/api/customers/1B9752D0-B41C-11ED-9DA2-C1621C7E5069",
+							"protocol": "http",
+							"host": [
+								"118",
+								"70",
+								"81",
+								"203"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"customers",
+								"1B9752D0-B41C-11ED-9DA2-C1621C7E5069"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImQyY2Q4NjllNTE4NGEyNDEwYjkxMWZhOGIyMTZmM2UzOWRhNGZkYzRiMWUxODRmNmEwMTk1ZDYzYmFjZTIxNzQzM2MyNjlmYzgyOWU5ZTVkIn0.eyJhdWQiOiIyIiwianRpIjoiZDJjZDg2OWU1MTg0YTI0MTBiOTExZmE4YjIxNmYzZTM5ZGE0ZmRjNGIxZTE4NGY2YTAxOTVkNjNiYWNlMjE3NDMzYzI2OWZjODI5ZTllNWQiLCJpYXQiOjE2NzcyMjg4NDQsIm5iZiI6MTY3NzIyODg0NCwiZXhwIjoxNjc3MjU3NjQ0LCJzdWIiOiIxRUM1MkVGMC04QUYxLTExRUMtOTZBQi0yOUU0MDNEQTFCN0IiLCJzY29wZXMiOltdfQ.eVIsCArbSLL_r5etkPwomPXCluN86V8pXmIuGQ5gxwwPYL9fVhqh6Wv4SryQLiNH-R0Jrhs-iOifPdIwd7UgSmx9srbOi9QG70ZtbUAE_ltw6J1HsaTj7yyxoKyY6vC_0XKYKBxTyn-e57pKfrX0mJm1audbGdFNb4gljwtN7cQyPoN4OMvrcDSAdnAslucSpppkMFMUI1qQ2oWvTZhtdOMGmjL7H7MONuflwGiWyc5SH9OlpHR4dovUIrsgtlSCTRYheIJnqKl0RQw_EVQ9sNenY0xT-8sEOY5ZXh0dVl-nLqrLgyWpxFQ2n5UTSycJPlMtItuyidAGet-tFKEEzmXwTXRw9F23EIbnugpj4qWewjdB0so-wolI1BAU5yTek0_LGcFtIMjA7DtZrrI-vhethEMkqN0TNuYeQEf-9nHFWEzbwEePTXLiBlqcOy6ov8Tdq6_mQAsL_wJBe_OqT9Uj4b6aulY3rxzknwRaDhLtqPhIxaoyJaCXYsRpuM8wDP_Cs-mgV1_WE8bWXOMXEwji_-nNfyNyXqj4toLIs6phwHx9f2QHXd9x0wV1JYO15dhHr2qKNAJl2Aone5EoVRk-vBn78AXpC4sz-CxTjmkeZV7khAa8n9Jl4BICT6HbFcfbi1OKjqvNIzxKYTyDCRy9UfbISnGkw3zLl0-pCXI",
+			"type": "string"
+		}
+	]
+}
