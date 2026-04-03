@@ -1,30 +1,150 @@
-# Tester Portfolio - Huynh Le Thuy Uyen
 
-## 📌 About Me
-Fresher Software Tester with knowledge in Manual Testing, API Testing and STLC.
+---
 
-## 🔧 Skills
-- Manual Testing
-- API Testing (Postman)
-- Test Case Design
-- Bug Tracking (Jira)
-- SQL basic
+## 🔍 Project Details
 
-## 📁 Projects
+### 📡 1. API Testing - IHOADON System
 
-### CRM System
-- Designed test cases
-- Performed functional testing
-- API testing using Postman
-- Logged bugs using Jira
+**File:** `API-IHOADON.postman_collection.json`  
+**Tool:** Postman  
 
-### Banking System
-- Tested login, transfer, transaction history
-- API testing
-- Bug reporting
+#### 📖 Description
+This collection contains API requests for testing the **IHOADON system**.
 
-## 🛠 Tools
-Postman, Jira, DBeaver, Git
+#### 🔧 Includes
+- HTTP methods: `GET`, `POST`, `PUT`, `DELETE`
+- Request headers & parameters  
+- Sample request body  
+- Expected responses  
+
+#### 🎯 Testing Focus
+- Validate API endpoints  
+- Check response status codes  
+- Verify response data structure  
+- Detect potential API errors  
+
+---
+
+### 📝 2. Test Cases - Login Feature
+
+**File:** `Sample Test Cases - Login.xlsx`
+
+#### 📖 Description
+A structured set of test cases for the **Login functionality**.
+
+#### 🧩 Test Case Structure
+- Test Case ID  
+- Test Scenario  
+- Preconditions  
+- Test Steps  
+- Expected Result  
+- Actual Result  
+- Status  
+
+#### 🎯 Covered Scenarios
+- Valid login  
+- Invalid credentials  
+- Empty input fields  
+- Boundary cases  
+- Basic negative cases  
+
+#### 💡 Goal
+Ensure login functionality works correctly under different conditions.
+
+---
+
+### 📊 3. Sample Test Data
+
+**File:** `Sample Test Data.xlsx`
+
+#### 📖 Description
+Test data used to support execution of test cases.
+
+#### 📦 Includes
+- Valid data  
+- Invalid data  
+- Boundary values  
+
+#### 🎯 Purpose
+- Improve test coverage  
+- Simulate real-world inputs  
+- Support negative testing  
+
+---
+
+## 🧠 Skills Demonstrated
+
+### 🔹 Manual Testing
+- Requirement understanding  
+- Test scenario identification  
+- Functional validation  
+
+### 🔹 Test Design
+- Writing clear test cases  
+- Structuring test steps logically  
+- Covering positive & negative cases  
+
+### 🔹 API Testing
+- Using Postman  
+- Sending requests & analyzing responses  
+- Validating status codes and data  
+
+### 🔹 Test Data Preparation
+- Creating meaningful datasets  
+- Handling edge cases  
+
+---
+
+## 🚀 How to Use
+
+### 1. Run API Testing
+- Open **Postman**
+- Click **Import**
+- Select file:  
+  `API-IHOADON.postman_collection.json`
+- Execute requests and observe responses  
+
+### 2. Review Test Cases
+- Open: `Sample Test Cases - Login.xlsx`
+- Follow test steps to execute manually  
+
+### 3. Use Test Data
+- Open: `Sample Test Data.xlsx`
+- Use data for testing scenarios  
+
+---
+
+## 📈 Future Improvements
+
+- Add more modules (Register, Forgot Password, etc.)  
+- Include bug reports  
+- Add test execution reports  
+- Expand API test coverage  
+- Learn automation testing (Selenium / Playwright)  
+
+---
+
+## 👩‍💻 Author
+
+**Huynh Le Thuy Uyen**  
+- Role: Software Tester (Fresher/Junior)  
+- Focus: Manual Testing & API Testing  
+
+---
 
 ## 📬 Contact
-Email: huynhlethuyuyen0611@gmail.com
+
+- 📧 Email: huynhlethuyuyen0611@gmail.com  
+
+---
+
+## ⭐ Notes
+
+This portfolio is created for **learning and demonstration purposes**.  
+I am continuously improving my testing skills and welcome feedback.
+
+---
+
+## 🙌 Thank You
+
+Thank you for reviewing my portfolio!  
