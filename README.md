@@ -15,16 +15,17 @@ This repository showcases my practical experience in software testing, including
 - Designing effective test data  
 
 ---
-
+ 
 ## 📂 Repository Structure
+
+```
 📁 Tester-Portfolio
 │
 ├── 📄 API-IHOADON.postman_collection.json
 ├── 📄 Sample Test Data.xlsx
 ├── 📄 Sample Test Cases - Login.xlsx
 └── README.md
-
----
+```
 
 ## 🔍 Project Details
 
